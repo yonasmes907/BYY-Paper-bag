@@ -32,7 +32,7 @@ const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalRef = useRef(null); // Ref for the interval
 
-  const handleSlideChange = (index) => {
+  const handleSlideChange = (index:number) => {
     setCurrentIndex(index);
   };
 
