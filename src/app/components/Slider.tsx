@@ -30,7 +30,8 @@ const slides = [
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const intervalRef = useRef(null); // Ref for the interval
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null); // Adjust the type to include Timeout
+
 
   const handleSlideChange = (index:number) => {
     setCurrentIndex(index);
